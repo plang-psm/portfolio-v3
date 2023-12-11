@@ -5,11 +5,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <div>
-      <Nav />
-      <section>
-        Hello, I am the body
-      </section>
-      <Footer />
+        Home page
     </div>
   )
 }
