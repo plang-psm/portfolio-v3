@@ -3,9 +3,9 @@ import { Inter } from 'next/font/google';
 import '@styles/globals.css';
 import Nav from '@components/Nav';
 import Footer from '@components/Footer';
-import { Providers } from '@components/Provider';
+import { ThemeProvider } from '@components/ThemeProvider';
 
-const inter = Inter({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'plang-psm',
@@ -18,14 +18,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' className='dark' style={{ colorScheme: 'dark' }}>
       <body>
         <main className='app'>
-          <Providers>
+          <ThemeProvider>
             <Nav />
             {children}
             <Footer />
-          </Providers>
+          </ThemeProvider>
         </main>
       </body>
     </html>
