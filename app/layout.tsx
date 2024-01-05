@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className='dark' style={{ colorScheme: 'dark' }}>
-      <body className='max-w-6xl mx-auto'>
+      <body className='max-w-6xl mx-auto px-4'>
         <main className='app'>
           <ThemeProvider>
             <Nav />
