@@ -13,9 +13,9 @@ const Nav = () => {
     index: number;
     label: string;
     link: string;
-  }
+  };
 
-  // const dynamic link array
+  // Dynamic link array
   const linkArr: Link[] = [
     {
       index: 0,
@@ -44,31 +44,44 @@ const Nav = () => {
     },
   ];
 
+  // Handler to toggle opening and hiding the nav menu in mobile.
   const handleNav = () => {
     setOpenNav(!openNav);
   };
 
   return (
     <nav className='p-4'>
-      {/* Mobile app */}
+      {/* Mobile */}
       <div className='mobile w-full flex justify-between'>
         <div className='logo text-2xl font-bold'>PLANG-PSM</div>
-        <div
-          className='hamburger md:hidden flex items-center'
-          onClick={() => setOpenNav(!openNav)}
-        >
-          <RxHamburgerMenu className='text-2xl' />
+        <div className='theme-nav text-2xl md:hidden flex items-center'>
+          <div className='theme-toggle pr-6'>
+            <ThemeToggle />
+          </div>
+          <RxHamburgerMenu className='' onClick={() => setOpenNav(!openNav)} />
         </div>
-        <div
-          className='hidden md:flex items-center'
-        >
-          {linkArr.map((item) => (
-            <Link href={item.link} className='hover:text-gray-300 px-4'>
-              <p className='cursor-pointer capitalize'>{item.label}</p>
-            </Link>
-          ))}
+        {/* Desktop */}
+        <div className='hidden md:flex items-center'>
+          <div className='links flex'>
+            {linkArr.map((item) => (
+              <Link
+                key={item.index}
+                href={item.link}
+                className='hover:text-gray-300 px-4'
+              >
+                <p className='cursor-pointer capitalize'>{item.label}</p>
+              </Link>
+            ))}
+          </div>
+          <div className='theme-toggle pl-4'>
+            <ThemeToggle />
+          </div>
         </div>
       </div>
+      {/* Hamburger menu options
+            - Links with an onClick that closes upon selection
+            - Close icon that closes the nav
+      */}
       <div className='hamburger-theme flex gap-2'>
         <ul
           className={`links ${
@@ -79,14 +92,16 @@ const Nav = () => {
             <TfiClose />
           </li>
           {linkArr.map((item) => (
-            <Link href={item.link} onClick={handleNav} className='hover:text-gray-300'>
+            <Link
+              key={item.index}
+              href={item.link}
+              onClick={handleNav}
+              className='hover:text-gray-300'
+            >
               <li className=' cursor-pointer capitalize'>{item.label}</li>
             </Link>
           ))}
         </ul>
-        {/* <div className='theme'>
-            <ThemeToggle />
-        </div> */}
       </div>
     </nav>
   );
