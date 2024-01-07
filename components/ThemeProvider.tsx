@@ -3,7 +3,7 @@
 import { ThemeProvider as Themes } from 'next-themes'
 import { useEffect, useState } from 'react'
 
-// Theme provider used to wrap and apply them to the whole app.
+// Theme provider used to wrap and provide access to the theme provider through our application.
 export function ThemeProvider({ children } : {children: React.ReactNode}) {
   const [mounted, setMounted] = useState(false)
 
