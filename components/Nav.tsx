@@ -50,65 +50,68 @@ const Nav = () => {
   };
 
   return (
-      <nav className='py-4'>
-        <div className="gradient-top fixed top-0 left-0 bg-gradient-to-r from-cyan-500 to-blue-500 z-[100] w-full blur-[50px]">.</div>
-        
-        {/* Mobile */}
-        <div className='mobile w-full flex justify-between'>
-          <div className='logo text-2xl font-bold'>PLANG-PSM</div>
-          <div className='theme-nav text-2xl md:hidden flex items-center'>
-            <div className='theme-toggle pr-6'>
-              <ThemeToggle />
-            </div>
-            <RxHamburgerMenu
-              className=''
-              onClick={() => setOpenNav(!openNav)}
-            />
+    <nav className='py-4'>
+      <div className='gradient-top fixed top-0 left-0 bg-gradient-to-r from-cyan-500 to-blue-500 z-[100] w-full blur-[50px]'>
+        .
+      </div>
+
+      {/* Mobile */}
+      <div className='mobile w-full flex justify-between'>
+        <div className='logo text-2xl font-bold'>PLANG-PSM</div>
+        <div className='theme-nav text-2xl md:hidden flex items-center'>
+          <div className='theme-toggle pr-6'>
+            <ThemeToggle />
           </div>
-          {/* Desktop */}
-          <div className='hidden md:flex items-center'>
-            <div className='links flex'>
-              {linkArr.map((item) => (
-                <Link
-                  key={item.index}
-                  href={item.link}
-                  className='hover:text-cyan-500 px-4'
-                >
-                  <p className='cursor-pointer uppercase font-light'>{item.label}</p>
-                </Link>
-              ))}
-            </div>
-            <div className='theme-toggle pl-4'>
-              <ThemeToggle />
-            </div>
-          </div>
+          <RxHamburgerMenu className='' onClick={() => setOpenNav(!openNav)} />
         </div>
-        {/* Hamburger menu options
-            - Links with an onClick that closes upon selection
-            - Close icon that closes the nav
-      */}
-        <div className='hamburger-theme flex gap-2'>
-          <ul
-            className={`links ${
-              !openNav ? 'hidden' : ''
-            } flex flex-col justify-center absolute top-0 left-0 gap-10 items-center list-none align-middle bg-black bg-opacity-80 backdrop-blur-sm h-full w-full text-white text-xl`}
-          >
-            <li className=' absolute p-5 top-0 right-0' onClick={handleNav}>
-              <TfiClose />
-            </li>
+        {/* Desktop */}
+        <div className='hidden md:flex items-center'>
+          <div className='links flex'>
             {linkArr.map((item) => (
               <Link
                 key={item.index}
                 href={item.link}
-                onClick={handleNav}
-                className='hover:text-cyan-500'
+                className='hover:text-cyan-500 px-4'
               >
-                <li className=' cursor-pointer uppercase font-light'>{item.label}</li>
+                <p className='cursor-pointer uppercase font-light'>
+                  {item.label}
+                </p>
               </Link>
             ))}
-          </ul>
+          </div>
+          <div className='theme-toggle pl-4'>
+            <ThemeToggle />
+          </div>
         </div>
-      </nav>
+      </div>
+      {/* Hamburger menu options
+            - Links with an onClick that closes upon selection
+            - Close icon that closes the nav
+      */}
+      <div className='hamburger-theme flex gap-2'>
+        <ul
+          className={`links ${
+            !openNav ? 'hidden' : ''
+          } flex flex-col justify-center absolute top-0 left-0 gap-10 items-center list-none align-middle bg-black bg-opacity-80 backdrop-blur-sm h-full w-full text-white text-xl`}
+        >
+          <li className=' absolute p-5 top-0 right-0' onClick={handleNav}>
+            <TfiClose />
+          </li>
+          {linkArr.map((item) => (
+            <Link
+              key={item.index}
+              href={item.link}
+              onClick={handleNav}
+              className='hover:text-cyan-500'
+            >
+              <li className=' cursor-pointer uppercase font-light'>
+                {item.label}
+              </li>
+            </Link>
+          ))}
+        </ul>
+      </div>
+    </nav>
   );
 };
 

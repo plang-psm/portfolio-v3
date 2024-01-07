@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='dark' style={{ colorScheme: 'dark' }}>
+    <html lang='en'>
       <body className='max-w-6xl mx-auto px-4'>
         <main className='app'>
           <ThemeProvider>
