@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='max-w-6xl mx-auto px-4'>
+      <body className='max-w-6xl mx-auto px-8'>
         <main className='app'>
           <ThemeProvider>
             <Nav />
