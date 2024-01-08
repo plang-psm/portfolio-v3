@@ -57,7 +57,7 @@ const Nav = () => {
 
       {/* Mobile */}
       <div className='mobile w-full flex justify-between'>
-        <div className='logo text-2xl font-bold'>PLANG-PSM</div>
+        <Link href={'/'} className='logo text-2xl font-bold'>PLANG-PSM</Link>
         <div className='theme-nav text-2xl md:hidden flex items-center'>
           <div className='theme-toggle pr-6'>
             <ThemeToggle />
