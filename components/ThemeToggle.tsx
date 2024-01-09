@@ -29,7 +29,7 @@ const ThemeToggle = () => {
   };
 
   return (
-    <button className='flex w-full h-full text-2xl items-center'>
+    <button aria-label='theme toggle icon' className='flex w-full h-full text-2xl items-center'>
       {renderThemeToggler()}
     </button>
   );

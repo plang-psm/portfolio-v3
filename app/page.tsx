@@ -22,22 +22,22 @@ export default function Home() {
       id: 'skills',
       content: (
         <ul className='flex flex-row flex-wrap '>
-          <li className='basis-1/3 text-start'>React.js</li>
-          <li className='basis-1/3 text-start'>Next.js</li>
-          <li className='basis-1/3 text-start'>JavaScript</li>
-          <li className='basis-1/3 text-start'>TypeScript</li>
-          <li className='basis-1/3 text-start'>Node.js</li>
-          <li className='basis-1/3 text-start'>Express.js</li>
-          <li className='basis-1/3 text-start'>SQL</li>
-          <li className='basis-1/3 text-start'>MySQL</li>
-          <li className='basis-1/3 text-start'>MongoDB</li>
-          <li className='basis-1/3 text-start'>Tailwind CSS</li>
-          <li className='basis-1/3 text-start'>Material CSS</li>
-          <li className='basis-1/3 text-start'>GitHub</li>
-          <li className='basis-1/3 text-start'>Agile</li>
-          <li className='basis-1/3 text-start'>Figma</li>
-          <li className='basis-1/3 text-start'>Postman</li>
-          <li className='basis-1/3 text-start'>Passport.js</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>React.js</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>Next.js</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>JavaScript</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>TypeScript</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>Node.js</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>Express.js</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>SQL</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>MySQL</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>MongoDB</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>Tailwind CSS</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>Material CSS</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>GitHub</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>Agile</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>Figma</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>Postman</li>
+          <li className='basis-1/3 md:basis-1/4 text-start'>Passport.js</li>
         </ul>
       ),
     },
@@ -130,7 +130,7 @@ export default function Home() {
             </div>
             <p className='font-bold pt-2'>
               Mementos{' '}
-              <span className='font-thin bg-cyan-500 px-1 py-[0.5] text-sm'>
+              <span className='font-normal bg-cyan-600 px-1 py-[0.5] text-sm'>
                 Coming soon
               </span>
             </p>
@@ -140,8 +140,8 @@ export default function Home() {
               </p>
             </div>
             <p className='font-bold pt-2'>
-              Adative Fields{' '}
-              <span className='font-thin bg-cyan-500 px-1 py-[0.5] text-sm'>
+              Adaptive Fields{' '}
+              <span className='font-normal bg-cyan-600 px-1 py-[0.5] text-sm'>
                 Coming soon
               </span>
             </p>
@@ -166,10 +166,10 @@ export default function Home() {
   };
 
   return (
-    <div className='pt-10 flex flex-col gap-2'>
+    <div className='mt-20 flex flex-col gap-2'>
       {/* Heading */}
       <div className='Heading page'>
-        <h1 className='text-xl md:text-3xl lg:text-4xl font-medium bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent inline-block'>
+        <h1 className='text-xl md:text-2xl font-medium bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent inline-block'>
           Hello, I'm
         </h1>
       </div>
@@ -207,9 +207,17 @@ export default function Home() {
           Contact
         </Link>
       </div>
-      <div className='about-skills md:grid md:grid-cols-2 md:gap-8'>
-        <div className='mt-10 md:order-2'>
-          <h2 className='text-xl md:text-2xl lg:text-4xl font-extrabold'>
+      <div className='mt-14 text-xl md:text-2xl p-4 text-center'>
+      <p className=" bg-gradient-to-r from-cyan-300 to-blue-700 bg-clip-text text-transparent inline-block">
+      " The person with the biggest dreams <br></br> is more powerful than the person with all the answers. ”
+      </p>
+      <p className='font-bold'>-Kai Greene </p>
+      
+      </div>
+
+      <div className='about-skills'>
+        <div className='mt-14'>
+          <h2 className='text-xl md:text-2xl font-extrabold'>
             About Me
           </h2>
           <p className='pt-2 font-light'>
@@ -221,9 +229,9 @@ export default function Home() {
             chance to work with tools and methodologies that include{' '}
             <span className='font-bold'>
               Next.js, TypeScript, React.js, Node.js, Express.js, MongoDB,
-              Tailwind CSS, GitHub, Figma, and Agile
+              Tailwind CSS, GitHub, Figma, and Agile 
             </span>
-            to name a few. I am finishing up a{' '}
+             to name a few. I am finishing up a{' '}
             <span className='font-bold'>
               Bachelors of Science in Computer Science
             </span>{' '}
@@ -234,9 +242,10 @@ export default function Home() {
             </span>
           </p>
         </div>
+        </div>
 
-        <div className='skills-education mt-10 md:order-1'>
-          <div className='skills-edu flex text-xl md:text-2xl lg:text-4xl font-extrabold'>
+        <div className='skills-education mt-14'>
+          <div className='skills-edu flex text-xl md:text-2xl font-extrabold'>
             <TabButton
               selectTab={() => handleTabChange('skills')}
               active={tab === 'skills'}
@@ -260,7 +269,7 @@ export default function Home() {
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>
-      </div>
+      
     </div>
   );
 }
