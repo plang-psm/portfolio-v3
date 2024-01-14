@@ -51,7 +51,9 @@ export default function Home() {
               <h3>Western Governors University</h3>
               <p>Apr 2024</p>
             </div>
-            <p className='font-bold pt-2'>Bachelors of Science Computer Science</p>
+            <p className='font-bold pt-2'>
+              Bachelors of Science Computer Science
+            </p>
             <div className='font-thin'>
               <p>
                 Data Structure and Algorithms I and II · Web Development
@@ -165,6 +167,11 @@ export default function Home() {
     });
   };
 
+  const displayData = () => {
+    const id = TAB_DATA.find((t) => t.id === tab);
+    return id?.content;
+  };
+
   return (
     <div className='mt-20 flex flex-col gap-2'>
       {/* Heading */}
@@ -208,18 +215,16 @@ export default function Home() {
         </Link>
       </div>
       <div className='mt-14 text-xl md:text-2xl p-4 text-center'>
-      <p className=" bg-gradient-to-r from-cyan-300 to-blue-700 bg-clip-text text-transparent inline-block">
-      " The person with the biggest dreams <br></br> is more powerful than the person with all the answers. ”
-      </p>
-      <p className='font-bold'>-Kai Greene </p>
-      
+        <p className=' bg-gradient-to-r from-cyan-300 to-blue-700 bg-clip-text text-transparent inline-block'>
+          " The person with the biggest dreams <br></br> is more powerful than
+          the person with all the answers. ”
+        </p>
+        <p className='font-bold'>-Kai Greene </p>
       </div>
 
       <div className='about-skills'>
         <div className='mt-14'>
-          <h2 className='text-xl md:text-2xl font-extrabold'>
-            About Me
-          </h2>
+          <h2 className='text-xl md:text-2xl font-extrabold'>About Me</h2>
           <p className='pt-2 font-light'>
             My name is Phillip and I am a{' '}
             <span className='font-bold'>Full Stack Developer</span> in the Los
@@ -229,9 +234,9 @@ export default function Home() {
             chance to work with tools and methodologies that include{' '}
             <span className='font-bold'>
               Next.js, TypeScript, React.js, Node.js, Express.js, MongoDB,
-              Tailwind CSS, GitHub, Figma, and Agile 
+              Tailwind CSS, GitHub, Figma, and Agile
             </span>
-             to name a few. I am finishing up a{' '}
+            to name a few. I am finishing up a{' '}
             <span className='font-bold'>
               Bachelors of Science in Computer Science
             </span>{' '}
@@ -242,34 +247,31 @@ export default function Home() {
             </span>
           </p>
         </div>
-        </div>
+      </div>
 
-        <div className='skills-education mt-14'>
-          <div className='skills-edu flex text-xl md:text-2xl font-extrabold'>
-            <TabButton
-              selectTab={() => handleTabChange('skills')}
-              active={tab === 'skills'}
-            >
-              Skills
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange('education')}
-              active={tab === 'education'}
-            >
-              Education
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange('experience')}
-              active={tab === 'experience'}
-            >
-              Experience
-            </TabButton>
-          </div>
-          <div className='mt-8 md:mt-0 md:pt-2 md:text-end'>
-            {TAB_DATA.find((t) => t.id === tab).content}
-          </div>
+      <div className='skills-education mt-14'>
+        <div className='skills-edu flex text-xl md:text-2xl font-extrabold'>
+          <TabButton
+            selectTab={() => handleTabChange('skills')}
+            active={tab === 'skills'}
+          >
+            Skills
+          </TabButton>
+          <TabButton
+            selectTab={() => handleTabChange('education')}
+            active={tab === 'education'}
+          >
+            Education
+          </TabButton>
+          <TabButton
+            selectTab={() => handleTabChange('experience')}
+            active={tab === 'experience'}
+          >
+            Experience
+          </TabButton>
         </div>
-      
+        <div className='mt-8 md:mt-0 md:pt-2 md:text-end'>{displayData()}</div>
+      </div>
     </div>
   );
 }
