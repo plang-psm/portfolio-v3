@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { TfiClose } from 'react-icons/tfi';
 import { RxHamburgerMenu } from 'react-icons/rx';
 
-import ThemeToggle from './ThemeToggle';
+// import ThemeToggle from './ThemeToggle';
 
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -60,7 +60,7 @@ const Nav = () => {
         <Link href={'/'} className='logo text-2xl font-bold'>PLANG-PSM</Link>
         <div className='theme-nav text-2xl md:hidden flex items-center'>
           <div className='theme-toggle pr-6'>
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </div>
           <RxHamburgerMenu className='' onClick={() => setOpenNav(!openNav)} />
         </div>
@@ -80,7 +80,7 @@ const Nav = () => {
             ))}
           </div>
           <div className='theme-toggle pl-4'>
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </div>
         </div>
       </div>
