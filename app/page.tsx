@@ -167,6 +167,7 @@ export default function Home() {
     });
   };
 
+  // Displays the TAB DATA content -- skills, edu and experience
   const displayData = () => {
     const id = TAB_DATA.find((t) => t.id === tab);
     return id?.content;
@@ -175,57 +176,59 @@ export default function Home() {
   return (
     <div className='mt-20 flex flex-col gap-2'>
       {/* Heading */}
-      <div className='Heading page'>
-        <h1 className='text-xl md:text-2xl font-medium bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent inline-block'>
-          Hello, I'm
-        </h1>
-      </div>
-      <TypeAnimation
-        sequence={[
-          // Same substring at the start will only be typed once, initially
-          'Front End Developer',
-          1000,
-          'Full Stack Developer',
-          1000,
-          'Web Developer',
-          1000,
-          'Phillip',
-          1000,
-        ]}
-        speed={50}
-        // style={{ fontSize: '2em' }}
-        repeat={Infinity}
-        className='text-4xl md:text-6xl lg:text-7xl font-extrabold'
-      />
-      <div className='flex gap-4'>
-        <Link
-          href={'https://github.com/plang-psm'}
-          className='hover:-translate-y-1 hover:text-cyan-600'
-        >
-          GitHub
-        </Link>
-        <Link
-          href={'https://www.linkedin.com/in/plang-psm/'}
-          className='hover:-translate-y-1 hover:text-cyan-600'
-        >
-          LinkedIn
-        </Link>
-        <Link href={''} className='hover:-translate-y-1 hover:text-cyan-600'>
-          Contact
-        </Link>
-      </div>
-      <div className='mt-14 text-xl md:text-2xl p-4 text-center'>
-        <p className=' bg-gradient-to-r from-cyan-300 to-blue-700 bg-clip-text text-transparent inline-block'>
-          " The person with the biggest dreams <br></br> is more powerful than
-          the person with all the answers. ”
-        </p>
-        <p className='font-bold'>-Kai Greene </p>
+      <div className='Heading page '>
+        <div className='div flex flex-col'>
+          <h1 className='pb-2 text-xl md:text-2xl font-normal bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent inline-block'>
+            Hello, I'm
+          </h1>
+        </div>
+        <TypeAnimation
+          sequence={[
+            // Same substring at the start will only be typed once, initially
+            'Front End Developer',
+            1000,
+            'Full Stack Developer',
+            1000,
+            'Web Developer',
+            1000,
+            'Phillip',
+            1000,
+          ]}
+          speed={50}
+          // style={{ fontSize: '2em' }}
+          repeat={Infinity}
+          className='text-3xl md:text-6xl lg:text-7xl font-extrabold'
+        />
+        <div className='pt-2 flex gap-4'>
+          <Link
+            href={'https://github.com/plang-psm'}
+            className='hover:-translate-y-1 hover:text-cyan-600'
+          >
+            GitHub
+          </Link>
+          <Link
+            href={'https://www.linkedin.com/in/plang-psm/'}
+            className='hover:-translate-y-1 hover:text-cyan-600'
+          >
+            LinkedIn
+          </Link>
+          <Link href={''} className='hover:-translate-y-1 hover:text-cyan-600'>
+            Contact
+          </Link>
+        </div>
+        <div className='mt-14 text-xl md:text-2xl p-4 text-center'>
+          <p className='max-w-[600px] bg-gradient-to-r from-cyan-300 to-blue-700 bg-clip-text text-transparent inline-block'>
+            "The person with the biggest dreams is more powerful than the person
+            with all the answers.”
+          </p>
+          <p className='font-bold pt-2'>-Kai Greene </p>
+        </div>
       </div>
 
       <div className='about-skills'>
-        <div className='mt-14'>
+        <div className=''>
           <h2 className='text-xl md:text-2xl font-extrabold'>About Me</h2>
-          <p className='pt-2 font-light'>
+          <p className='pt-2 font-light text-center md:text-start'>
             My name is Phillip and I am a{' '}
             <span className='font-bold'>Full Stack Developer</span> in the Los
             Angeles area. I have{' '}
