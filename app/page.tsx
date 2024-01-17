@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useTransition } from 'react';
+import Image from 'next/image';
+// import popflix from '@assets/popflix.png'
 
 // import Footer from '@components/Footer';
 // import Nav from '@components/Nav';
@@ -8,6 +10,11 @@ import { useState, useTransition } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
 import TabButton from '@components/TabButton';
+import { FaGithub } from 'react-icons/fa';
+import { FaExternalLinkSquareAlt } from 'react-icons/fa';
+import { BiSolidNotepad } from 'react-icons/bi';
+import Projects from '@components/Projects';
+import PROJECT_DATA from '@data/ProjectsData';
 
 export default function Home() {
   type Tab = {
@@ -174,7 +181,7 @@ export default function Home() {
   };
 
   return (
-    <div className='mt-20 flex flex-col gap-2'>
+    <div className='py-20 flex flex-col gap-2'>
       {/* Heading */}
       <div className='Heading page '>
         <div className='div flex flex-col'>
@@ -226,7 +233,7 @@ export default function Home() {
       </div>
 
       <div className='about-skills'>
-        <div className=''>
+        <div className='py-16'>
           <h2 className='text-xl md:text-2xl font-extrabold'>About Me</h2>
           <p className='pt-2 font-light text-center md:text-start'>
             My name is Phillip and I am a{' '}
@@ -252,7 +259,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='skills-education mt-14'>
+      <div className='skills-education py-16'>
         <div className='skills-edu flex text-xl md:text-2xl font-extrabold'>
           <TabButton
             selectTab={() => handleTabChange('skills')}
@@ -274,6 +281,24 @@ export default function Home() {
           </TabButton>
         </div>
         <div className='mt-8 md:mt-0 md:pt-2 md:text-end'>{displayData()}</div>
+      </div>
+
+      <div className='projects mt-14'>
+        <div className='filter text-center'>
+          <button className='p-2 mx-1 border border-red-500'>
+            All Projects
+          </button>
+          <button className='p-2 mx-1 border border-red-500'>
+            Professional
+          </button>
+          <button className='p-2 mx-1 border border-red-500'>Personal</button>
+        </div>
+        {/* <div className='projects-display mt-10 flex flex-wrap flex-col md:flex-row justify-center md:justify-between gap-4'> */}
+        <div className='projects-display mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+          {PROJECT_DATA.map((project) => (
+            <Projects key={project.key} project={project} />
+          ))}
+        </div>
       </div>
     </div>
   );
