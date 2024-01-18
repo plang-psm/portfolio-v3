@@ -1,29 +1,17 @@
 'use client';
 
-import { useState, useTransition } from 'react';
-import Image from 'next/image';
-// import popflix from '@assets/popflix.png'
-
-// import Footer from '@components/Footer';
-// import Nav from '@components/Nav';
-// import Image from 'next/image';
+import { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
 import TabButton from '@components/TabButton';
-import { FaGithub } from 'react-icons/fa';
-import { FaExternalLinkSquareAlt } from 'react-icons/fa';
-import { BiSolidNotepad } from 'react-icons/bi';
+import { Tab } from '@types';
 import Projects from '@components/Projects';
-import PROJECT_DATA from '@data/ProjectsData';
+import PROJECT_DATA from '@data/ProjectsData'
 
 export default function Home() {
-  type Tab = {
-    title: string;
-    id: string;
-    content: any;
-  };
-
-  const TAB_DATA: Tab[] = [
+  const [skillTab, setSkillTab] = useState('skills');
+  const [projectTab, setProjectTab] = useState('all');
+  const SKILL_TAB_DATA = [
     {
       title: 'Skills',
       id: 'skills',
@@ -165,20 +153,15 @@ export default function Home() {
     },
   ];
 
-  const [tab, setTab] = useState('skills');
-  const [isPending, startTransition] = useTransition();
-
-  const handleTabChange = (id: string) => {
-    startTransition(() => {
-      setTab(id);
-    });
-  };
-
-  // Displays the TAB DATA content -- skills, edu and experience
-  const displayData = () => {
-    const id = TAB_DATA.find((t) => t.id === tab);
+  // Displays the SKILLS TAB DATA content -- skills, edu and experience
+  const displayData = (data: Tab[], tab: string) => {
+    const id = data.find((t) => t.id === tab);
     return id?.content;
   };
+
+  const filteredData = PROJECT_DATA.filter((project) =>
+    project.type.includes(projectTab)
+  );
 
   return (
     <div className='py-20 flex flex-col gap-2'>
@@ -262,41 +245,53 @@ export default function Home() {
       <div className='skills-education py-16'>
         <div className='skills-edu flex text-xl md:text-2xl font-extrabold'>
           <TabButton
-            selectTab={() => handleTabChange('skills')}
-            active={tab === 'skills'}
+            selectTab={() => setSkillTab('skills')}
+            active={skillTab === 'skills'}
           >
             Skills
           </TabButton>
           <TabButton
-            selectTab={() => handleTabChange('education')}
-            active={tab === 'education'}
+            selectTab={() => setSkillTab('education')}
+            active={skillTab === 'education'}
           >
             Education
           </TabButton>
           <TabButton
-            selectTab={() => handleTabChange('experience')}
-            active={tab === 'experience'}
+            selectTab={() => setSkillTab('experience')}
+            active={skillTab === 'experience'}
           >
             Experience
           </TabButton>
         </div>
-        <div className='mt-8 md:mt-0 md:pt-2 md:text-end'>{displayData()}</div>
+        <div className='mt-8 md:mt-0 md:pt-2 md:text-end'>
+          {displayData(SKILL_TAB_DATA, skillTab)}
+        </div>
       </div>
 
       <div className='projects mt-14'>
-        <div className='filter text-center'>
-          <button className='p-2 mx-1 border border-red-500'>
+        <div className='filter flex text-xl md:text-2xl font-extrabold'>
+          <TabButton
+            selectTab={() => setProjectTab('all')}
+            active={projectTab === 'all'}
+          >
             All Projects
-          </button>
-          <button className='p-2 mx-1 border border-red-500'>
+          </TabButton>
+          <TabButton
+            selectTab={() => setProjectTab('professional')}
+            active={projectTab === 'professional'}
+          >
             Professional
-          </button>
-          <button className='p-2 mx-1 border border-red-500'>Personal</button>
+          </TabButton>
+          <TabButton
+            selectTab={() => setProjectTab('personal')}
+            active={projectTab === 'personal'}
+          >
+            Personal
+          </TabButton>
         </div>
-        {/* <div className='projects-display mt-10 flex flex-wrap flex-col md:flex-row justify-center md:justify-between gap-4'> */}
-        <div className='projects-display mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
-          {PROJECT_DATA.map((project) => (
-            <Projects key={project.key} project={project} />
+        <div className='projects-display overflow-hidden mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+          {filteredData.map((project, index) => (
+            <Projects key={index} project={project} />
           ))}
         </div>
       </div>
