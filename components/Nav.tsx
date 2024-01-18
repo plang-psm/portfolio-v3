@@ -29,16 +29,11 @@ const Nav = () => {
     },
     {
       index: 2,
-      label: 'Projects',
-      link: '/projects',
-    },
-    {
-      index: 3,
       label: 'Contact',
       link: '/contact',
     },
     {
-      index: 4,
+      index: 3,
       label: 'Resume',
       link: '/resume',
     },
@@ -57,11 +52,11 @@ const Nav = () => {
 
       {/* Mobile */}
       <div className='mobile w-full flex justify-between'>
-        <Link href={'/'} className='logo text-2xl font-bold'>PLANG-PSM</Link>
+        <Link href={'/'} className='logo text-2xl font-bold'>
+          PLANG-PSM
+        </Link>
         <div className='theme-nav text-2xl md:hidden flex items-center'>
-          <div className='theme-toggle pr-6'>
-            {/* <ThemeToggle /> */}
-          </div>
+          <div className='theme-toggle pr-6'>{/* <ThemeToggle /> */}</div>
           <RxHamburgerMenu className='' onClick={() => setOpenNav(!openNav)} />
         </div>
         {/* Desktop */}
@@ -79,9 +74,7 @@ const Nav = () => {
               </Link>
             ))}
           </div>
-          <div className='theme-toggle pl-4'>
-            {/* <ThemeToggle /> */}
-          </div>
+          <div className='theme-toggle pl-4'>{/* <ThemeToggle /> */}</div>
         </div>
       </div>
       {/* Hamburger menu options
