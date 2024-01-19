@@ -1,4 +1,4 @@
-export type ProjectProps = {
+export interface ProjectProps {
   key: number;
   title: string;
   alt: string;
@@ -9,12 +9,18 @@ export type ProjectProps = {
   tools: any;
 };
 
-export type ProjectCardProps = {
+export interface ProjectCardProps {
   project: ProjectProps;
 }
 
-export type Tab = {
+export interface Tab {
   title: string;
   id: string;
   content: any;
+};
+
+export interface Link {
+  index: number;
+  label: string;
+  link: string;
 };

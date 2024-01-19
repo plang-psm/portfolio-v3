@@ -3,41 +3,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { TfiClose } from 'react-icons/tfi';
 import { RxHamburgerMenu } from 'react-icons/rx';
-
-// import ThemeToggle from './ThemeToggle';
+import LINK_ARR from '@data/LinkData';
 
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
-
-  type Link = {
-    index: number;
-    label: string;
-    link: string;
-  };
-
-  // Dynamic link array
-  const linkArr: Link[] = [
-    {
-      index: 0,
-      label: 'Home',
-      link: '/',
-    },
-    {
-      index: 1,
-      label: 'About',
-      link: '/about',
-    },
-    {
-      index: 2,
-      label: 'Contact',
-      link: '/contact',
-    },
-    {
-      index: 3,
-      label: 'Resume',
-      link: '/resume',
-    },
-  ];
 
   // Handler to toggle opening and hiding the nav menu in mobile.
   const handleNav = () => {
@@ -45,62 +14,68 @@ const Nav = () => {
   };
 
   return (
-    <nav className='py-4'>
+    <nav className='py-4 w-full'>
+      {/* Top Gradient bg blur */}
       <div className='gradient-top fixed top-0 left-0 bg-gradient-to-r from-cyan-500 to-blue-500 z-[100] w-full blur-[50px]'>
         .
       </div>
 
-      {/* Mobile */}
-      <div className='mobile w-full flex justify-between'>
-        <Link href={'/'} className='logo text-2xl font-bold'>
-          PLANG-PSM
-        </Link>
-        <div className='theme-nav text-2xl md:hidden flex items-center'>
-          <div className='theme-toggle pr-6'>{/* <ThemeToggle /> */}</div>
-          <RxHamburgerMenu className='' onClick={() => setOpenNav(!openNav)} />
+      {/* Navbar */}
+      <div className='flex justify-between'>
+        <div className='logo'>
+          <h1 className='logo text-2xl font-bold w-100 cursor-pointer hover:text-cyan-500'>
+            PLANG-PSM
+          </h1>
         </div>
-        {/* Desktop */}
+        {/* Mobile Hamburger menu */}
+        <div className='hamburger-menu md:hidden cursor-pointer hover:text-cyan-500'>
+          <RxHamburgerMenu size={25} onClick={() => setOpenNav(!openNav)} />
+        </div>
+        {/* Desktop navbar listing */}
         <div className='hidden md:flex items-center'>
-          <div className='links flex'>
-            {linkArr.map((item) => (
-              <Link
-                key={item.index}
-                href={item.link}
-                className='hover:text-cyan-500 px-4'
-              >
-                <p className='cursor-pointer uppercase font-light'>
+          <ul className='links flex gap-10'>
+            {LINK_ARR.map((item) => (
+              <li key={item.index}>
+                <Link href={item.link} className='hover:text-cyan-500 active:font-bold'>
+                  <p className='cursor-pointer uppercase font-light'>
+                    {item.label}
+                  </p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* Navbar mobile pop out */}
+      <div
+        className={
+          openNav
+            ? 'md:hidden fixed z-50 left-0 top-0 w-[100%] h-full bg-[#0A0A0A] transition-all text-center'
+            : 'md:hidden fixed left-[-100%]'
+        }
+      >
+        <div className='nav-open p-4 flex justify-between content-center'>
+          <Link href='/'>
+            <h1 className='logo text-2xl font-bold w-100 hover:text-cyan-500'>
+              PLANG-PSM
+            </h1>
+          </Link>
+          <TfiClose
+            size={25}
+            className='my-auto mx-4 hover:text-cyan-500 cursor-pointer'
+            onClick={handleNav}
+          />
+        </div>
+        <ul className='flex flex-col mt-[30%]'>
+          {LINK_ARR.map((item) => (
+            <li key={item.index} className=''>
+              <Link href={item.link} className='px-4'>
+                <p className='cursor-pointer uppercase font-light hover:text-cyan-500'>
                   {item.label}
                 </p>
               </Link>
-            ))}
-          </div>
-          <div className='theme-toggle pl-4'>{/* <ThemeToggle /> */}</div>
-        </div>
-      </div>
-      {/* Hamburger menu options
-            - Links with an onClick that closes upon selection
-            - Close icon that closes the nav
-      */}
-      <div className='hamburger-theme flex gap-2'>
-        <ul
-          className={`links ${
-            !openNav ? 'hidden' : ''
-          } flex flex-col justify-center absolute top-0 left-0 gap-10 items-center list-none align-middle bg-black bg-opacity-80 backdrop-blur-sm h-full w-full text-white text-xl`}
-        >
-          <li className=' absolute p-5 top-0 right-0' onClick={handleNav}>
-            <TfiClose />
-          </li>
-          {linkArr.map((item) => (
-            <Link
-              key={item.index}
-              href={item.link}
-              onClick={handleNav}
-              className='hover:text-cyan-500'
-            >
-              <li className=' cursor-pointer uppercase font-light'>
-                {item.label}
-              </li>
-            </Link>
+            </li>
           ))}
         </ul>
       </div>
