@@ -27,12 +27,13 @@ function Projects(project: ProjectProps) {
         <div className='description'>
           <div className='title text-2xl pt-2'>{title}</div>
           <div className='links flex gap-2 py-1 justify-center'>
-            <Link href='/' target='_blank' className='hover:-translate-y-1'>
+            <Link href='/' target='_blank' aria-label={`${title}'s project breakdown page link.`} className='hover:-translate-y-1'>
               <p>{<BiSolidNotepad size={20} />}</p>
             </Link>
             <Link
               href={github}
               target='_blank'
+              aria-label={`${title}'s project github page link.`}
               className='hover:-translate-y-1'
             >
               <p>{<FaGithub size={20} />}</p>
@@ -41,6 +42,7 @@ function Projects(project: ProjectProps) {
               <Link
                 href={live}
                 target='_blank'
+                aria-label={`${title}'s project live page link.`}
                 className='hover:-translate-y-1'
               >
                 <p>{<FaExternalLinkSquareAlt size={20} />}</p>

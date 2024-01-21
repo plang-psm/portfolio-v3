@@ -23,7 +23,6 @@ function Header() {
           1000,
         ]}
         speed={50}
-        // style={{ fontSize: '2em' }}
         repeat={Infinity}
         className='text-3xl md:text-6xl lg:text-7xl font-extrabold'
       />

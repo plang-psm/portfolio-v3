@@ -19,7 +19,6 @@ const Nav = () => {
       <div className='gradient-top fixed top-0 left-0 bg-gradient-to-r from-cyan-500 to-blue-500 z-[100] w-full blur-[50px]'>
         .
       </div>
-
       {/* Navbar */}
       <div className='flex justify-between'>
         <div className='logo'>
@@ -47,7 +46,6 @@ const Nav = () => {
           </ul>
         </div>
       </div>
-
       {/* Navbar mobile pop out */}
       <div
         className={
