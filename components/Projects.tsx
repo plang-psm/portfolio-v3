@@ -1,64 +1,52 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { FaGithub } from 'react-icons/fa';
-import { FaExternalLinkSquareAlt } from 'react-icons/fa';
-import { BiSolidNotepad } from 'react-icons/bi';
-import { ProjectProps } from '@types';
+'use client';
+import React, { useState } from 'react';
+import ProjectCard from './ProjectCard';
+import PROJECT_DATA from '@data/ProjectsData';
+import TabButton from './TabButton';
 
-function Projects(project: ProjectProps) {
-  const { title, img, alt, type, github, live, tools } = project;
+function Projects() {
+  const [projectTab, setProjectTab] = useState('all');
 
+  const filteredData = PROJECT_DATA.filter((project) =>
+    project.type.includes(projectTab)
+  );
   return (
-    <>
-      <div
-        className='project-container text-center w-[325px] mx-auto'
-        key={title}
-      >
-        <div className='image max-w-[325px] h-[250px] relative'>
-          <Image
-            src={img}
-            alt={alt}
-            width={300}
-            height={250}
-            className='object-cover w-full h-full'
-          />
-        </div>
-        <div className='description'>
-          <div className='title text-2xl pt-2'>{title}</div>
-          <div className='links flex gap-2 py-1 justify-center'>
-            <Link href='/' target='_blank' className='hover:-translate-y-1'>
-              <p>{<BiSolidNotepad size={20} />}</p>
-            </Link>
-            <Link
-              href={github}
-              target='_blank'
-              className='hover:-translate-y-1'
-            >
-              <p>{<FaGithub size={20} />}</p>
-            </Link>
-            {live && (
-              <Link
-                href={live}
-                target='_blank'
-                className='hover:-translate-y-1'
-              >
-                <p>{<FaExternalLinkSquareAlt size={20} />}</p>
-              </Link>
-            )}
-          </div>
-          <div className='tools'>
-            <ul className='flex flex-wrap gap-2 justify-center text-sm'>
-              {tools.map((tool: string) => (
-                <li key={tool} className=''>
-                  {tool}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+    <div className='projects mt-12'>
+      <div className='filter flex text-xl md:text-2xl font-extrabold'>
+        <TabButton
+          selectTab={() => setProjectTab('all')}
+          active={projectTab === 'all'}
+        >
+          All Projects
+        </TabButton>
+        <TabButton
+          selectTab={() => setProjectTab('professional')}
+          active={projectTab === 'professional'}
+        >
+          Professional
+        </TabButton>
+        <TabButton
+          selectTab={() => setProjectTab('personal')}
+          active={projectTab === 'personal'}
+        >
+          Personal
+        </TabButton>
       </div>
-    </>
+      <div className='projects-display overflow-hidden mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+        {filteredData.map((project, index) => (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            alt={project.alt}
+            img={project.img}
+            type={project.type}
+            github={project.github}
+            live={project.live}
+            tools={project.tools}
+          />
+        ))}
+      </div>
+    </div>
   );
 }
 

@@ -9,10 +9,6 @@ export interface ProjectProps {
   tools: string[];
 };
 
-// export interface ProjectCardProps {
-//   project: ProjectProps;
-// }
-
 export interface Tab {
   title: string;
   id: string;
