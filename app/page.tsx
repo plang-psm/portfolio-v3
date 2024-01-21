@@ -291,7 +291,15 @@ export default function Home() {
         </div>
         <div className='projects-display overflow-hidden mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
           {filteredData.map((project, index) => (
-            <Projects key={index} project={project} />
+            <Projects key={index}
+              title={project.title}
+              alt={project.alt}
+              img={project.img}
+              type={project.type}
+              github={project.github}
+              live={project.live}
+              tools={project.tools}
+            />
           ))}
         </div>
       </div>

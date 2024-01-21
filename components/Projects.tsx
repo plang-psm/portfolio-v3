@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
 import { FaExternalLinkSquareAlt } from 'react-icons/fa';
 import { BiSolidNotepad } from 'react-icons/bi';
-import { ProjectCardProps } from '@types';
+import { ProjectProps } from '@types';
 
-function Projects({ project }: ProjectCardProps) {
+function Projects(project: ProjectProps) {
   const { title, img, alt, type, github, live, tools } = project;
 
   return (
