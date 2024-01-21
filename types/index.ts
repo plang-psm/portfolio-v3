@@ -7,20 +7,16 @@ export interface ProjectProps {
   github: string;
   live: string;
   tools: any;
-};
-
-export interface ProjectCardProps {
-  project: ProjectProps;
 }
 
 export interface Tab {
   title: string;
   id: string;
   content: any;
-};
+}
 
 export interface Link {
   index: number;
   label: string;
   link: string;
-};
+}
