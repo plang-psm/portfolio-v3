@@ -116,7 +116,7 @@ export default function Home() {
             <div className='font-thin'>
               <p>
                 React.js · Node.js · Express.js · Material UI · CSS · GitHub ·
-                Kanban · Agile · Figma · CI/CD
+                Kanban · Agile · Figma
               </p>
             </div>
           </div>
@@ -192,17 +192,17 @@ export default function Home() {
         <div className='pt-2 flex gap-4'>
           <Link
             href={'https://github.com/plang-psm'}
-            className='hover:-translate-y-1 hover:text-cyan-600'
+            className='hover:-translate-y-1 hover:text-cyan-500'
           >
             GitHub
           </Link>
           <Link
             href={'https://www.linkedin.com/in/plang-psm/'}
-            className='hover:-translate-y-1 hover:text-cyan-600'
+            className='hover:-translate-y-1 hover:text-cyan-500'
           >
             LinkedIn
           </Link>
-          <Link href={''} className='hover:-translate-y-1 hover:text-cyan-600'>
+          <Link href={''} className='hover:-translate-y-1 hover:text-cyan-500'>
             Contact
           </Link>
         </div>

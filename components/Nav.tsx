@@ -52,7 +52,7 @@ const Nav = () => {
       <div
         className={
           openNav
-            ? 'md:hidden fixed z-50 left-0 top-0 w-[100%] h-full bg-[#0A0A0A] transition-all text-center'
+            ? 'md:hidden fixed z-50 left-0 top-0 w-full h-full bg-[#0A0A0A] transition-all text-center'
             : 'md:hidden fixed left-[-100%]'
         }
       >
@@ -68,7 +68,7 @@ const Nav = () => {
             onClick={handleNav}
           />
         </div>
-        <ul className='flex flex-col mt-[30%]'>
+        <ul className='flex flex-col absolute top-[30%] right-[43%]'>
           {LINK_ARR.map((item) => (
             <li key={item.index} className=''>
               <Link href={item.link} className='px-4'>
