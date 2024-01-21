@@ -33,13 +33,14 @@ const Nav = () => {
         </div>
         {/* Desktop navbar listing */}
         <div className='hidden md:flex items-center'>
-          <ul className='links flex gap-10'>
+          <ul className='links flex gap-6'>
             {LINK_ARR.map((item) => (
               <li key={item.index}>
-                <Link href={item.link} className='hover:text-cyan-500 active:font-bold'>
-                  <p className='cursor-pointer uppercase font-light'>
-                    {item.label}
-                  </p>
+                <Link
+                  href={item.link}
+                  className='hover:text-cyan-500 active:font-bold'
+                >
+                  <p className='cursor-pointer  font-light'>{item.label}</p>
                 </Link>
               </li>
             ))}
@@ -71,7 +72,7 @@ const Nav = () => {
           {LINK_ARR.map((item) => (
             <li key={item.index} className=''>
               <Link href={item.link} className='px-4'>
-                <p className='cursor-pointer uppercase font-light hover:text-cyan-500'>
+                <p className='cursor-pointer font-light hover:text-cyan-500'>
                   {item.label}
                 </p>
               </Link>

@@ -7,8 +7,8 @@
     },
     {
       index: 1,
-      label: 'About',
-      link: '/about',
+      label: 'Blog',
+      link: '/blog',
     },
     {
       index: 2,

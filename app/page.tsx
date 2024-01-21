@@ -242,7 +242,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='skills-education py-16'>
+      <div className='skills-education py-16 h-[450px]'>
         <div className='skills-edu flex text-xl md:text-2xl font-extrabold'>
           <TabButton
             selectTab={() => setSkillTab('skills')}
@@ -268,7 +268,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='projects mt-14'>
+      <div className='projects mt-12'>
         <div className='filter flex text-xl md:text-2xl font-extrabold'>
           <TabButton
             selectTab={() => setProjectTab('all')}
