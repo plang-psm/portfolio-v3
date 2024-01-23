@@ -4,7 +4,7 @@ function About() {
   return (
     <div className='about-skills'>
     <div className='py-16'>
-      <h2 className='text-xl md:text-2xl font-extrabold'>About Me</h2>
+      <h2 className='text-xl text-center md:text-start md:text-2xl font-extrabold'>About Me</h2>
       <p className='pt-2 font-light text-center md:text-start'>
         My name is Phillip and I am a{' '}
         <span className='font-bold'>Full Stack Developer</span> in the Los
