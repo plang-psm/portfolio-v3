@@ -11,7 +11,7 @@ function Projects() {
     project.type.includes(projectTab)
   );
   return (
-    <div className='projects mt-12'>
+    <div className='projects my-16'>
       <div className='filter flex text-xl md:text-2xl font-extrabold'>
         <TabButton
           selectTab={() => setProjectTab('all')}
