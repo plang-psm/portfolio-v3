@@ -147,11 +147,13 @@ const SKILL_TAB_DATA = [
 
 function Skills() {
   const [skillTab, setSkillTab] = useState('experience');
+
   // Displays the SKILLS TAB DATA content -- skills, edu and experience
   const displayData = (data: Tab[], tab: string) => {
     const id = data.find((t) => t.id === tab);
     return id?.content;
   };
+
   return (
     <div className='skills-education py-16 h-[450px]'>
       <div className='skills-edu flex text-xl md:text-2xl font-extrabold'>
@@ -182,3 +184,5 @@ function Skills() {
 }
 
 export default Skills;
+
+

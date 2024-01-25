@@ -6,8 +6,8 @@ import { FaExternalLinkSquareAlt } from 'react-icons/fa';
 import { BiSolidNotepad } from 'react-icons/bi';
 import { ProjectProps } from '@types';
 
-function Projects(project: ProjectProps) {
-  const { title, img, alt, type, github, live, tools } = project;
+function Projects({ title, img, alt, type, github, live, tools } : ProjectProps) {
+  // const { title, img, alt, type, github, live, tools } = project;
 
   return (
     <>

@@ -2,6 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 
 function Contact() {
+
+  
+
   return (
     <div className='mt-16 max-w-[325px] md:max-w-full w-full mx-auto'>
       <div className='container mx-auto md:px-0 w-full text-center md:grid md:grid-cols-2 md:gap-4'>

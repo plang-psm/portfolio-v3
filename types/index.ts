@@ -15,6 +15,12 @@ export interface Tab {
   content: any;
 };
 
+export interface TabProps {
+  active: boolean;
+  selectTab: () => void
+  children: string;
+};
+
 export interface Link {
   index: number;
   label: string;
