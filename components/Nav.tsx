@@ -28,7 +28,7 @@ const Nav = () => {
         </div>
         {/* Mobile Hamburger menu */}
         <div className='hamburger-menu md:hidden cursor-pointer hover:text-cyan-500'>
-          <RxHamburgerMenu size={25} onClick={() => setOpenNav(!openNav)} />
+          <RxHamburgerMenu size={25} onClick={() => handleNav()} />
         </div>
         {/* Desktop navbar listing */}
         <div className='hidden md:flex items-center'>
@@ -68,7 +68,7 @@ const Nav = () => {
         </div>
         <ul className='flex flex-col absolute top-[30%] right-[43%]'>
           {LINK_ARR.map((item) => (
-            <li key={item.index} className=''>
+            <li key={item.index} onClick={handleNav}>
               <Link href={item.link} className='px-4'>
                 <p className='cursor-pointer font-light hover:text-cyan-500'>
                   {item.label}

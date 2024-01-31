@@ -13,7 +13,7 @@
     {
       index: 2,
       label: 'Contact',
-      link: '/contact',
+      link: '/#contact',
     },
     {
       index: 3,
