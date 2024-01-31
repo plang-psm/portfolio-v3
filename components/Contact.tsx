@@ -1,9 +1,21 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { useForm } from 'react-hook-form';
+import { sendEmail } from '@app/utils/send-email';
+import { FormData } from '@types';
 
 function Contact() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>();
 
-  
+  function onSubmit(data: FormData) {
+    sendEmail(data);
+  }
 
   return (
     <div className='mt-16 max-w-[325px] md:max-w-full w-full mx-auto'>
@@ -16,7 +28,7 @@ function Contact() {
             I'm currently looking for new opportunities. Reach out if you have a
             question or just want to say hi!
           </p>
-          <ul className='flex gap-4'>
+          <ul className='flex justify-center md:justify-start gap-4'>
             <Link
               href={'https://github.com/plang-psm'}
               className='hover:-translate-y-1 hover:text-cyan-500'
@@ -31,44 +43,56 @@ function Contact() {
             </Link>
           </ul>
         </div>
-        <div className='contact-form pt-6'>
+        <div className='contact-form pt-6' id='contact'>
           <form
-            action='https://formsubmit.co/el/sitena'
-            method='POST'
-            id='contact'
-            className='flex flex-col'
+            onSubmit={handleSubmit(onSubmit)}
+            className='flex flex-col '
+            noValidate
           >
             <input
               type='text'
-              id='fullname'
-              name='fullname'
-              required
+              id='name'
               className='p-1'
+              {...register('name', { required: 'Username Required' })}
             />
-            <label htmlFor='fullname' className='text-sm text-start py-2'>
-              Full name
-            </label>
+            <div className='label-div text-start py-2'>
+              {errors.name?.message ? (
+                <label htmlFor='name' className='text-red-500'>
+                  {errors.name?.message}
+                </label>
+              ) : (
+                <label htmlFor='name'>Full name</label>
+              )}
+            </div>
+
             <input
-              type='text'
+              type='email'
               id='email'
-              name='email'
-              required
               className='p-1'
+              {...register('email', {
+                required: 'Email is required',
+                pattern: {
+                  value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                  message: 'Invalid Email format',
+                },
+              })}
             />
-            <label htmlFor='email' className='text-sm text-start py-2 '>
-              Email
-            </label>
+            <div className='label-div text-start py-2'>
+              {errors.email?.message ? (
+                <label htmlFor='name' className='text-red-500'>
+                  {errors.email?.message}
+                </label>
+              ) : (
+                <label htmlFor='name'>Email</label>
+              )}
+            </div>
             <textarea
-              name=''
-              id='message'
               cols={20}
               rows={5}
               className='p-1'
+              {...register('message', { required: true })}
             ></textarea>
-            <label
-              htmlFor='message'
-              className='text-sm text-start content-start py-2'
-            >
+            <label htmlFor='message' className='text-start content-start py-2'>
               Anything to add? (Optional)
             </label>
             <button
