@@ -1,6 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import TabButton from '@components/TabButton';
+import Link from 'next/link';
+import { FaGithub } from 'react-icons/fa';
+import { FaExternalLinkSquareAlt } from 'react-icons/fa';
 import { Tab } from '@types';
 
 const SKILL_TAB_DATA = [
@@ -20,6 +23,8 @@ const SKILL_TAB_DATA = [
         <li className='basis-1/3 md:basis-1/4 text-start'>MongoDB</li>
         <li className='basis-1/3 md:basis-1/4 text-start'>Tailwind CSS</li>
         <li className='basis-1/3 md:basis-1/4 text-start'>Material CSS</li>
+        <li className='basis-1/3 md:basis-1/4 text-start'>Cypress</li>
+        <li className='basis-1/3 md:basis-1/4 text-start'>Jest</li>
         <li className='basis-1/3 md:basis-1/4 text-start'>GitHub</li>
         <li className='basis-1/3 md:basis-1/4 text-start'>Agile</li>
         <li className='basis-1/3 md:basis-1/4 text-start'>Figma</li>
@@ -81,13 +86,23 @@ const SKILL_TAB_DATA = [
           </div>
           <div className='title flex justify-between items-center pt-2'>
             <p className='font-bold'>hackforla.org</p>
-            <div className='links'>
-              <a href='' className='github mr-4'>
-                Git
-              </a>
-              <a href='' className='live'>
-                Link
-              </a>
+            <div className='links flex items-center'>
+              <Link
+                href={'https://github.com/plang-psm/website'}
+                target='_blank'
+                aria-label={`'s project github page link.`}
+                className='hover:-translate-y-1 mr-4'
+              >
+                {<FaGithub size={25} />}
+              </Link>
+              <Link
+                href={'https://www.hackforla.org/'}
+                target='_blank'
+                aria-label={`'s project live page link.`}
+                className='hover:-translate-y-1'
+              >
+                {<FaExternalLinkSquareAlt size={25} />}
+              </Link>
             </div>
           </div>
           <div className='font-thin'>
@@ -95,13 +110,23 @@ const SKILL_TAB_DATA = [
           </div>
           <div className='title flex justify-between items-center pt-2'>
             <p className='font-bold'>vrms.io</p>
-            <div className='links'>
-              <a href='' className='github mr-4'>
-                Git
-              </a>
-              <a href='' className='live'>
-                Link
-              </a>
+            <div className='links flex items-center'>
+              <Link
+                href={'https://github.com/plang-psm/VRMS'}
+                target='_blank'
+                aria-label={`'s project github page link.`}
+                className='hover:-translate-y-1 mr-4'
+              >
+                {<FaGithub size={25} />}
+              </Link>
+              <Link
+                href={'https://www.vrms.io/'}
+                target='_blank'
+                aria-label={`'s project live page link.`}
+                className='hover:-translate-y-1'
+              >
+                {<FaExternalLinkSquareAlt size={25} />}
+              </Link>
             </div>
           </div>
 
@@ -155,7 +180,7 @@ function Skills() {
   };
 
   return (
-    <div className='skills-education py-16 h-[450px]'>
+    <div className='skills-education py-16 h-[500px]'>
       <div className='skills-edu flex text-xl md:text-2xl font-extrabold'>
         <TabButton
           selectTab={() => setSkillTab('experience')}
@@ -184,5 +209,3 @@ function Skills() {
 }
 
 export default Skills;
-
-

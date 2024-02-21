@@ -32,7 +32,7 @@ function Projects() {
           Personal
         </TabButton>
       </div>
-      <div className='projects-display overflow-hidden mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+      <div className='projects-display overflow-hidden w-full mt-10 flex flex-wrap justify-between md:basis-2/4 lg:4/12'>
         {filteredData.map((project, index) => (
           <ProjectCard
             key={index}

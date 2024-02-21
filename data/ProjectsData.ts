@@ -7,7 +7,7 @@ const PROJECT_DATA = [
     type: ['personal', 'all'],
     github: 'https://github.com/plang-psm/popflix-v2',
     live: 'https://popfliix.vercel.app/',
-    tools: ['React', 'Node', 'Express', 'MongoDB', 'Tailwind', 'Redux Toolkit'],
+    tools: ['React', 'Node', 'Express', 'MongoDB', 'Tailwind', 'Redux Toolkit', 'Cypress', 'Jest'],
   },
   {
     key: 2,
@@ -35,7 +35,7 @@ const PROJECT_DATA = [
     alt: 'Image of Mementos project',
     img: '/assets/Mementos.png',
     type: ['professional', 'all'],
-    github: 'https://github.com/hackforla/website',
+    github: 'https://github.com/plang-psm/mementos',
     live: '',
     tools: ['Next', 'TypeScript', 'Tailwind.css', 'Figma'],
   },
@@ -45,8 +45,8 @@ const PROJECT_DATA = [
     alt: 'Image of The Open Book project',
     img: '/assets/top.png',
     type: ['personal', 'all'],
-    github: 'https://github.com/hackforla/website',
-    live: 'https://www.hackforla.org/',
+    github: 'https://github.com/plang-psm/the-open-book',
+    live: 'https://the-open-book-production.up.railway.app/',
     tools: [
       'JavaScript',
       'Node',
@@ -64,7 +64,7 @@ const PROJECT_DATA = [
     img: '/assets/appointments.jpg',
     type: ['personal', 'all'],
     github:
-      'https://github.com/hackforla/websitehttps://github.com/plang-psm/Appointment-Manager',
+      'https://github.com/plang-psm/Appointment-Manager',
     live: '',
     tools: ['Java', 'SQL', 'SceneBuilder', 'JavaFx', 'MVC', 'OOP'],
   },

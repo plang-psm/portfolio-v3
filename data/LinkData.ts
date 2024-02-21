@@ -15,11 +15,6 @@
       label: 'Contact',
       link: '/#contact',
     },
-    {
-      index: 3,
-      label: 'Resume',
-      link: '/resume',
-    },
   ];
 
   export default LINK_ARR;

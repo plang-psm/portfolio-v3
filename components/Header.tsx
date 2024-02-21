@@ -30,17 +30,20 @@ function Header() {
         <Link
           href={'https://github.com/plang-psm'}
           className='hover:-translate-y-1 hover:text-cyan-500'
+          target='_blank'
         >
           GitHub
         </Link>
         <Link
           href={'https://www.linkedin.com/in/plang-psm/'}
           className='hover:-translate-y-1 hover:text-cyan-500'
+          target='_blank'
         >
-          LinkedIn
+        LinkedIn
         </Link>
-        <Link href={''} className='hover:-translate-y-1 hover:text-cyan-500'>
-          Contact
+        <Link href={'/assets/Resume.pdf'} className='hover:-translate-y-1 hover:text-cyan-500'
+        target='_blank'>
+          Resume
         </Link>
       </div>
       <div className='mt-14 text-xl md:text-2xl p-4 text-center'>

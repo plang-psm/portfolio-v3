@@ -7,12 +7,10 @@ import { BiSolidNotepad } from 'react-icons/bi';
 import { ProjectProps } from '@types';
 
 function Projects({ title, img, alt, type, github, live, tools } : ProjectProps) {
-  // const { title, img, alt, type, github, live, tools } = project;
-
   return (
     <>
       <div
-        className='project-container text-center w-[325px] mx-auto'
+        className='mx-auto md:mx-0 pt-4 project-container text-center w-[325px]'
         key={title}
       >
         <div className='image max-w-[325px] h-[250px] relative'>
@@ -27,16 +25,17 @@ function Projects({ title, img, alt, type, github, live, tools } : ProjectProps)
         <div className='description'>
           <div className='title text-2xl pt-2'>{title}</div>
           <div className='links flex gap-2 py-1 justify-center'>
+            {/* Coming soon - Write up. 
             <Link href='/' target='_blank' aria-label={`${title}'s project breakdown page link.`} className='hover:-translate-y-1'>
-              <p>{<BiSolidNotepad size={20} />}</p>
-            </Link>
+              {<BiSolidNotepad size={32} />}
+            </Link> */}
             <Link
               href={github}
               target='_blank'
               aria-label={`${title}'s project github page link.`}
               className='hover:-translate-y-1'
             >
-              <p>{<FaGithub size={20} />}</p>
+              {<FaGithub size={25} />}
             </Link>
             {live && (
               <Link
@@ -45,7 +44,7 @@ function Projects({ title, img, alt, type, github, live, tools } : ProjectProps)
                 aria-label={`${title}'s project live page link.`}
                 className='hover:-translate-y-1'
               >
-                <p>{<FaExternalLinkSquareAlt size={20} />}</p>
+                {<FaExternalLinkSquareAlt size={25} />}
               </Link>
             )}
           </div>

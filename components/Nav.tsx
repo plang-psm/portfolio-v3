@@ -37,12 +37,21 @@ const Nav = () => {
               <li key={item.index}>
                 <Link
                   href={item.link}
-                  className='hover:text-cyan-500 active:font-bold'
+                  className={`hover:text-cyan-500 active:font-bold`}
                 >
-                  <p className='cursor-pointer  font-light'>{item.label}</p>
+                  <p className='cursor-pointer font-light'>{item.label}</p>
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href={'/assets/Resume.pdf'}
+                className={`hover:text-cyan-500 active:font-bold`}
+                target='_blank'
+              >
+                <p className='cursor-pointer font-light'>Resume</p>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
@@ -66,7 +75,7 @@ const Nav = () => {
             onClick={handleNav}
           />
         </div>
-        <ul className='flex flex-col absolute top-[30%] right-[43%]'>
+        <ul className='flex flex-col absolute top-[30%] right-[41%] text-xl'>
           {LINK_ARR.map((item) => (
             <li key={item.index} onClick={handleNav}>
               <Link href={item.link} className='px-4'>
@@ -76,6 +85,15 @@ const Nav = () => {
               </Link>
             </li>
           ))}
+          <li className='py-6'>
+            <Link
+              href={'/assets/Resume.pdf'}
+              className='hover:text-cyan-500 active:font-bold'
+              target='_blank'
+            >
+              <p className='cursor-pointer font-light'>Resume</p>
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

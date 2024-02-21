@@ -4,6 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { sendEmail } from '@app/utils/send-email';
+import { FaGithub } from 'react-icons/fa';
+import { FaExternalLinkSquareAlt } from 'react-icons/fa';
 import { FormData } from '@types';
 
 function Contact() {
@@ -28,20 +30,24 @@ function Contact() {
             I'm currently looking for new opportunities. Reach out if you have a
             question or just want to say hi!
           </p>
-          <ul className='flex justify-center md:justify-start gap-4'>
-            <Link
-              href={'https://github.com/plang-psm'}
-              className='hover:-translate-y-1 hover:text-cyan-500'
-            >
-              GitHub
-            </Link>
-            <Link
-              href={'https://www.linkedin.com/in/plang-psm/'}
-              className='hover:-translate-y-1 hover:text-cyan-500'
-            >
-              LinkedIn
-            </Link>
-          </ul>
+          <div className='links flex items-center'>
+              <Link
+                href={''}
+                target='_blank'
+                aria-label={`'s project github page link.`}
+                className='hover:-translate-y-1 mr-4'
+              >
+                {<FaGithub size={25} />}
+              </Link>
+              <Link
+                href={''}
+                target='_blank'
+                aria-label={`'s project live page link.`}
+                className='hover:-translate-y-1'
+              >
+                {<FaExternalLinkSquareAlt size={25} />}
+              </Link>
+            </div>
         </div>
         <div className='contact-form pt-6' id='contact'>
           <form
@@ -97,7 +103,7 @@ function Contact() {
             </label>
             <button
               type='submit'
-              className='bg-cyan-500 bg-opacity-50 hover:bg-opacity-90'
+              className='bg-[#1F54D9] hover:bg-opacity-70'
             >
               Submit
             </button>
