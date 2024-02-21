@@ -33,7 +33,7 @@ const PROJECT_DATA = [
     key: 4,
     title: 'Mementos',
     alt: 'Image of Mementos project',
-    img: '/assets/Mementos.png',
+    img: '/assets/mementos.png',
     type: ['professional', 'all'],
     github: 'https://github.com/plang-psm/mementos',
     live: '',
