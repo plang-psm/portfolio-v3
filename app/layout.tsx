@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import '@styles/globals.css';
 import Nav from '@components/Nav';
 import Footer from '@components/Footer';
-import { ThemeProvider } from '@components/ThemeProvider';
 
 export const metadata: Metadata = {
   title: 'plang-psm',
@@ -15,14 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      <body className='max-w-6xl mx-auto px-8'>
+    <html lang='en' className='dark'>
+      <body className='max-w-6xl mx-auto px-8 dark:bg-black text-slate-100'>
         <main className='app'>
-          <ThemeProvider>
-            <Nav />
-            {children}
-            <Footer />
-          </ThemeProvider>
+          <Nav />
+          {children}
+          <Footer />
         </main>
       </body>
     </html>

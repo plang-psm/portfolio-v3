@@ -59,7 +59,7 @@ function Contact() {
               <input
                 type='text'
                 id='name'
-                className='p-1 w-full'
+                className='p-1 w-full bg-slate-500'
                 {...register('username', { required: 'Username Required' })}
                 name='username'
                 autoComplete='name'
@@ -77,7 +77,7 @@ function Contact() {
               <input
                 type='email'
                 id='email'
-                className='p-1 w-full'
+                className='p-1 w-full bg-slate-500'
                 {...register('email', {
                   required: 'Email is required',
                   pattern: {
@@ -101,7 +101,7 @@ function Contact() {
               <textarea
                 cols={20}
                 rows={5}
-                className='p-1 w-full'
+                className='p-1 w-full bg-slate-500'
                 {...register('message', { required: true })}
                 name='message'
                 autoComplete='message'
