@@ -34,7 +34,7 @@ function Projects({ title, img, alt, type, github, live, tools } : ProjectProps)
               href={github}
               target='_blank'
               aria-label={`${title}'s project github page link.`}
-              className='hover:-translate-y-1'
+              className='hover:-translate-y-1 mr-2'
             >
               {<FaGithub size={25} />}
             </Link>

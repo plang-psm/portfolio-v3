@@ -75,7 +75,7 @@ const Nav = () => {
             onClick={handleNav}
           />
         </div>
-        <ul className='flex flex-col absolute top-[30%] right-[41%] text-xl'>
+        <ul className='flex flex-col absolute top-[30%] right-[42%] text-xl'>
           {LINK_ARR.map((item) => (
             <li key={item.index} onClick={handleNav}>
               <Link href={item.link} className='px-4'>
