@@ -1,4 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
+
+<div align='center'>
+    <h1>Portfolio</h1>
+    <p>My personal portfolio. Built with Next.JS, TypeScript, and Tailwind.css.</p>
+        <a href='https://www.linkedin.com/in/plang-psm/' target='_blank'><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn tag" /></a>
+</div>
+
+
+
+## Table of Contents
+* [Description](#description)
+* [Technologies](#technologies)
+* [Road Map](#road-map)
+* [Launch](#launch)
+* [Key take aways](#key-take-aways)
+* [Contact](#contact)
+* [Resources](#resources)
+
+![pf_header](https://github.com/plang-psm/portfolio-v3/assets/101952500/78632074-74ee-4382-af04-d3ba9a46fa0f)
+
+## Description
+Portfolio was created to highlight my experience in technology. The project also includes a personal blog to discuess topics on modern tech.
+
+## Technologies
+* <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML tag"  />
+* <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS tag"  />
+* <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript tag" />
+
+## Road Map
+- [ ] Blog
+
+## Launch
+You can open the project here:
+[Portfolio](https://www.psicode.dev/)
+
+## Contact
+<a href='https://www.linkedin.com/in/plang-psm/' target='_blank'><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn tag" /></a>
 
 ## Getting Started
 
@@ -34,3 +75,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Resources
+Badges: <a href='https://github.com/Ileriayo/markdown-badges' target='_blank'>Copyright (c) 2020 Ileriayo Adebiyi</a>
+
+Header and Layout: <a href='https://github.com/othneildrew/Best-README-Template' target='_blank'>Copyright (c) 2021 Othneil Drew</a>
+
+[contributors-shield]: https://img.shields.io/github/contributors/plang-psm/dice-game.svg?style=for-the-badge
+[contributors-url]: https://github.com/plang-psm/dice-game/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/plang-psm/dice-game.svg?style=for-the-badge
+[forks-url]: https://github.com/plang-psm/dice-game/network/members
+[stars-shield]: https://img.shields.io/github/stars/plang-psm/dice-game.svg?style=for-the-badge
+[stars-url]: https://github.com/plang-psm/dice-game/stargazers
+[issues-shield]: https://img.shields.io/github/issues/plang-psm/dice-game.svg?style=for-the-badge
+[issues-url]: https://github.com/plang-psm/dice-game/issues
