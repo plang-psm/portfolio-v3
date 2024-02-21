@@ -16,7 +16,7 @@ function About() {
           Next.js, TypeScript, React.js, Node.js, Express.js, MongoDB,
           Tailwind CSS, GitHub, Figma, and Agile
         </span>
-        to name a few. I am finishing up a{' '}
+        {' '}to name a few. I am finishing up a{' '}
         <span className='font-bold'>
           Bachelors of Science in Computer Science
         </span>{' '}

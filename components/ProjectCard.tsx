@@ -13,13 +13,14 @@ function Projects({ title, img, alt, type, github, live, tools } : ProjectProps)
         className='mx-auto md:mx-0 pt-4 project-container text-center w-[325px]'
         key={title}
       >
-        <div className='image max-w-[325px] h-[250px] relative'>
+        <div className='image max-w-[325px] h-[250px]'>
           <Image
             src={img}
             alt={alt}
-            width={300}
+            width={325}
             height={250}
             className='object-cover w-full h-full'
+            priority
           />
         </div>
         <div className='description'>

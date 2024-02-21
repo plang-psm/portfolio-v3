@@ -28,7 +28,7 @@ export interface Link {
 };
 
 export type FormData = {
-  name: string
+  username: string
   email: string
   message: string
 }

@@ -37,7 +37,7 @@ const Nav = () => {
               <li key={item.index}>
                 <Link
                   href={item.link}
-                  className={`hover:text-cyan-500 active:font-bold`}
+                  className={`hover:text-cyan-500 active:border-b-2 active:border-cyan-500 active:font-bold`}
                 >
                   <p className='cursor-pointer font-light'>{item.label}</p>
                 </Link>

@@ -1,10 +1,9 @@
-// 'use client'
 import { TabProps } from '@types';
 import React from 'react'
 
 const TabButton = ({active, selectTab, children}: TabProps) => {
 
-    const btnClasses = active ? "border-b-2 border-cyan-500" : "text-gray-500";
+    const btnClasses = active ? "border-b-2 border-cyan-500 pb-2" : "text-gray-500 pb-2";
 
   return (
     <button className='mx-auto md:mx-0' onClick={selectTab}>

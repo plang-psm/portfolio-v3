@@ -31,23 +31,23 @@ function Contact() {
             question or just want to say hi!
           </p>
           <div className='links flex items-center'>
-              <Link
-                href={''}
-                target='_blank'
-                aria-label={`'s project github page link.`}
-                className='hover:-translate-y-1 mr-4'
-              >
-                {<FaGithub size={25} />}
-              </Link>
-              <Link
-                href={''}
-                target='_blank'
-                aria-label={`'s project live page link.`}
-                className='hover:-translate-y-1'
-              >
-                {<FaExternalLinkSquareAlt size={25} />}
-              </Link>
-            </div>
+            <Link
+              href={''}
+              target='_blank'
+              aria-label={`'s project github page link.`}
+              className='hover:-translate-y-1 mr-4'
+            >
+              {<FaGithub size={25} />}
+            </Link>
+            <Link
+              href={''}
+              target='_blank'
+              aria-label={`'s project live page link.`}
+              className='hover:-translate-y-1'
+            >
+              {<FaExternalLinkSquareAlt size={25} />}
+            </Link>
+          </div>
         </div>
         <div className='contact-form pt-6' id='contact'>
           <form
@@ -55,56 +55,60 @@ function Contact() {
             className='flex flex-col '
             noValidate
           >
-            <input
-              type='text'
-              id='name'
-              className='p-1'
-              {...register('name', { required: 'Username Required' })}
-            />
-            <div className='label-div text-start py-2'>
-              {errors.name?.message ? (
-                <label htmlFor='name' className='text-red-500'>
-                  {errors.name?.message}
-                </label>
-              ) : (
-                <label htmlFor='name'>Full name</label>
-              )}
-            </div>
+            <label className='text-center py-2'>
+              <input
+                type='text'
+                id='name'
+                className='p-1 w-full'
+                {...register('username', { required: 'Username Required' })}
+                name='username'
+                autoComplete='name'
+              />
+              <div className='label-div text-start'>
+                {errors.username?.message ? (
+                  <p className='text-red-500'>{errors.username?.message}</p>
+                ) : (
+                  <p>Full Name</p>
+                )}
+              </div>
+            </label>
 
-            <input
-              type='email'
-              id='email'
-              className='p-1'
-              {...register('email', {
-                required: 'Email is required',
-                pattern: {
-                  value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                  message: 'Invalid Email format',
-                },
-              })}
-            />
-            <div className='label-div text-start py-2'>
-              {errors.email?.message ? (
-                <label htmlFor='name' className='text-red-500'>
-                  {errors.email?.message}
-                </label>
-              ) : (
-                <label htmlFor='name'>Email</label>
-              )}
-            </div>
-            <textarea
-              cols={20}
-              rows={5}
-              className='p-1'
-              {...register('message', { required: true })}
-            ></textarea>
-            <label htmlFor='message' className='text-start content-start py-2'>
+            <label>
+              <input
+                type='email'
+                id='email'
+                className='p-1 w-full'
+                {...register('email', {
+                  required: 'Email is required',
+                  pattern: {
+                    value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                    message: 'Invalid Email format',
+                  },
+                })}
+                name='email'
+                autoComplete='email'
+              />
+              <div className='label-div text-start'>
+                {errors.email?.message ? (
+                  <p className='text-red-500'>{errors.email?.message}</p>
+                ) : (
+                  <p>Email</p>
+                )}
+              </div>
+            </label>
+
+            <label className='text-start content-start py-2'>
+              <textarea
+                cols={20}
+                rows={5}
+                className='p-1 w-full'
+                {...register('message', { required: true })}
+                name='message'
+                autoComplete='message'
+              ></textarea>
               Anything to add? (Optional)
             </label>
-            <button
-              type='submit'
-              className='bg-[#1F54D9] hover:bg-opacity-70'
-            >
+            <button type='submit' className='bg-[#1F54D9] hover:bg-opacity-70'>
               Submit
             </button>
           </form>
