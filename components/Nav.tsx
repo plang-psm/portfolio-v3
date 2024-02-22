@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, use } from 'react';
 import Link from 'next/link';
 import { TfiClose } from 'react-icons/tfi';
 import { RxHamburgerMenu } from 'react-icons/rx';
@@ -11,16 +11,12 @@ const Nav = () => {
   // Handler to toggle opening and hiding the nav menu in mobile.
   const handleNav = () => {
     setNav(!nav);
-    nav
-    ? (document.body.style.overflow = 'hidden')
-    : (document.body.style.overflow = 'auto');
   };
 
   // Function to hide nav on resize at md breakpoint. Used to manage state so scrolling isn't prevented when changing from mobile to web.
   const handleResize = () => {
     if (window.innerWidth >= 768) {
       setNav(false);
-      // handleScroll()
     }
   };
 
@@ -34,12 +30,12 @@ const Nav = () => {
     };
   }, []);
 
-  // Prevents user from scrolling when modal is open. Based on nav state.
-  // const handleScroll = () => {
-  //   nav
-  //     ? (document.body.style.overflow = 'hidden')
-  //     : (document.body.style.overflow = 'auto');
-  // };
+  // Prevents user from scrolling when modal is open.
+  useEffect(() => {
+    nav
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'auto');
+  }, [nav]);
 
   return (
     <nav className='py-4 w-full'>
