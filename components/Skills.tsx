@@ -105,6 +105,8 @@ const SKILL_TAB_DATA = [
               </Link>
             </div>
           </div>
+          <div className="font-normal">Front End Developer</div>
+
           <div className='font-thin'>
             <p>HTML · SASS · JavaScript · GitHub · Kanban · Agile · Figma</p>
           </div>
@@ -129,7 +131,7 @@ const SKILL_TAB_DATA = [
               </Link>
             </div>
           </div>
-
+          <div className="font-normal">Full Stack Developer</div>
           <div className='font-thin'>
             <p>
               React.js · Node.js · Express.js · Material UI · CSS · GitHub ·
