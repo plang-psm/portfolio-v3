@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { sendEmail } from '@app/utils/send-email';
 import { FaGithub } from 'react-icons/fa';
-import { FaExternalLinkSquareAlt } from 'react-icons/fa';
+import { FaExternalLinkSquareAlt, FaLinkedin } from 'react-icons/fa';
 import { FormData } from '@types';
 
 function Contact() {
@@ -32,7 +32,7 @@ function Contact() {
           </p>
           <div className='links flex items-center'>
             <Link
-              href={''}
+              href={'https://github.com/plang-psm'}
               target='_blank'
               aria-label={`'s project github page link.`}
               className='hover:-translate-y-1 mr-4'
@@ -40,12 +40,12 @@ function Contact() {
               {<FaGithub size={25} />}
             </Link>
             <Link
-              href={''}
+              href={'https://www.linkedin.com/in/plang-psm/'}
               target='_blank'
               aria-label={`'s project live page link.`}
               className='hover:-translate-y-1'
             >
-              {<FaExternalLinkSquareAlt size={25} />}
+              {<FaLinkedin size={25} />}
             </Link>
           </div>
         </div>
