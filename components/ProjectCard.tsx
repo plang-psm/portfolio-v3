@@ -6,21 +6,20 @@ import { FaExternalLinkSquareAlt } from 'react-icons/fa';
 import { BiSolidNotepad } from 'react-icons/bi';
 import { ProjectProps } from '@types';
 
-function Projects({ title, img, alt, type, github, live, tools } : ProjectProps) {
+function Projects({ title, img, alt, github, live, tools } : ProjectProps) {
   return (
     <>
       <div
-        className='mx-auto md:mx-0 pt-4 project-container text-center w-[325px]'
+        className='mx-auto md:mx-0 pt-4 project-container text-center w-[350px]'
         key={title}
       >
-        <div className='image max-w-[325px] h-[250px]'>
+        <div className='image max-w-[350px] h-[250px]'>
           <Image
             src={img}
             alt={alt}
-            width={325}
+            width={350}
             height={250}
-            className='object-cover w-full h-full'
-            priority
+            className='object-cover object-top w-full h-full'
           />
         </div>
         <div className='description'>

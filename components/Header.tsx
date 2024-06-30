@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
@@ -12,7 +13,6 @@ function Header() {
       </div>
       <TypeAnimation
         sequence={[
-          // Same substring at the start will only be typed once, initially
           'Front End Developer',
           1000,
           'Full Stack Developer',
@@ -39,10 +39,13 @@ function Header() {
           className='hover:-translate-y-1 hover:text-cyan-500'
           target='_blank'
         >
-        LinkedIn
+          LinkedIn
         </Link>
-        <Link href={'/assets/Resume.pdf'} className='hover:-translate-y-1 hover:text-cyan-500'
-        target='_blank'>
+        <Link
+          href={'/assets/Resume.pdf'}
+          className='hover:-translate-y-1 hover:text-cyan-500'
+          target='_blank'
+        >
           Resume
         </Link>
       </div>

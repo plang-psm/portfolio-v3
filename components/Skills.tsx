@@ -90,7 +90,7 @@ const SKILL_TAB_DATA = [
               <Link
                 href={'https://github.com/plang-psm/website'}
                 target='_blank'
-                aria-label={`'s project github page link.`}
+                aria-label={`Hack for LA's project github page link.`}
                 className='hover:-translate-y-1 mr-4'
               >
                 {<FaGithub size={25} />}
@@ -98,14 +98,14 @@ const SKILL_TAB_DATA = [
               <Link
                 href={'https://www.hackforla.org/'}
                 target='_blank'
-                aria-label={`'s project live page link.`}
+                aria-label={`Hack for LA's project live page link.`}
                 className='hover:-translate-y-1'
               >
                 {<FaExternalLinkSquareAlt size={25} />}
               </Link>
             </div>
           </div>
-          <div className="font-normal">Front End Developer</div>
+          <div className='font-normal'>Front End Developer</div>
 
           <div className='font-thin'>
             <p>HTML · SASS · JavaScript · GitHub · Kanban · Agile · Figma</p>
@@ -116,7 +116,7 @@ const SKILL_TAB_DATA = [
               <Link
                 href={'https://github.com/plang-psm/VRMS'}
                 target='_blank'
-                aria-label={`'s project github page link.`}
+                aria-label={`VRMS's project github page link.`}
                 className='hover:-translate-y-1 mr-4'
               >
                 {<FaGithub size={25} />}
@@ -124,14 +124,14 @@ const SKILL_TAB_DATA = [
               <Link
                 href={'https://www.vrms.io/'}
                 target='_blank'
-                aria-label={`'s project live page link.`}
+                aria-label={`VRMS's project live page link.`}
                 className='hover:-translate-y-1'
               >
                 {<FaExternalLinkSquareAlt size={25} />}
               </Link>
             </div>
           </div>
-          <div className="font-normal">Full Stack Developer</div>
+          <div className='font-normal'>Full Stack Developer</div>
           <div className='font-thin'>
             <p>
               React.js · Node.js · Express.js · Material UI · CSS · GitHub ·
@@ -144,23 +144,20 @@ const SKILL_TAB_DATA = [
             <h3>Freelance</h3>
             <p>Jan 2024 - Current</p>
           </div>
-          <p className='font-bold pt-2'>
-            Mementos{' '}
-            <span className='font-normal bg-cyan-600 px-1 py-[0.5] text-sm'>
-              Coming soon
-            </span>
-          </p>
-          <div className='font-thin'>
-            <p>
-              React.js · Next.js · TypeScript · Tailwind.css · GitHub · Figma
-            </p>
+          <div className='title flex justify-between items-center pt-2'>
+            <p className='font-bold'>Mementos Photo Booth</p>
+            <div className='links flex items-center'>
+              <Link
+                href={'https://github.com/plang-psm/mementos'}
+                target='_blank'
+                aria-label={`Mementos's project github page link.`}
+                className='hover:-translate-y-1 mr-4'
+              >
+                {<FaGithub size={25} />}
+              </Link>
+            </div>
           </div>
-          <p className='font-bold pt-2'>
-            Adaptive Fields{' '}
-            <span className='font-normal bg-cyan-600 px-1 py-[0.5] text-sm'>
-              Coming soon
-            </span>
-          </p>
+          <div className='font-normal'>Full Stack Developer</div>
           <div className='font-thin'>
             <p>
               React.js · Next.js · TypeScript · Tailwind.css · GitHub · Figma

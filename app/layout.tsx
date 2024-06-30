@@ -14,13 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='dark'>
-      <body className='max-w-6xl mx-auto px-8 dark:bg-black text-slate-100'>
-        <main className='app'>
+    <html>
+      <body className='max-w-6xl mx-auto px-8 bg-black text-slate-100'>
           <Nav />
           {children}
           <Footer />
-        </main>
       </body>
     </html>
   );
