@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import '@styles/globals.css';
 import Nav from '@components/Nav';
-import Footer from '@components/Footer';
 
 export const metadata: Metadata = {
   title: 'plang-psm',
@@ -18,7 +17,6 @@ export default function RootLayout({
       <body className='max-w-6xl mx-auto px-8 bg-black text-slate-100'>
           <Nav />
           {children}
-          <Footer />
       </body>
     </html>
   );
