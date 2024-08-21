@@ -8,10 +8,10 @@ import { FaGithub } from 'react-icons/fa';
 import { FaExternalLinkSquareAlt, FaLinkedin } from 'react-icons/fa';
 
 export type FormData = {
-  username: string
-  email: string
-  message: string
-}
+  username: string;
+  email: string;
+  message: string;
+};
 
 function Contact() {
   const {
