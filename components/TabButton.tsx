@@ -1,5 +1,10 @@
-import { TabProps } from '@types';
 import React from 'react'
+
+export interface TabProps {
+  active: boolean;
+  selectTab: () => void
+  children: string;
+};
 
 const TabButton = ({active, selectTab, children}: TabProps) => {
 

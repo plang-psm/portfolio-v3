@@ -4,7 +4,12 @@ import TabButton from '@components/TabButton';
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
 import { FaExternalLinkSquareAlt } from 'react-icons/fa';
-import { Tab } from '@types';
+
+export interface Tab {
+  title: string;
+  id: string;
+  content: any;
+};
 
 const SKILL_TAB_DATA = [
   {

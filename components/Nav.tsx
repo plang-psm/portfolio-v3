@@ -42,9 +42,11 @@ const Nav = () => {
       {/* Navbar */}
       <div className='flex justify-between'>
         <div className='logo'>
-          <h1 className='logo text-2xl font-bold w-100 cursor-pointer hover:text-cyan-500'>
-            PLANG-PSM
-          </h1>
+          <Link href={'/'}>
+            <h1 className='logo text-2xl font-bold w-100 cursor-pointer hover:text-cyan-500'>
+              PLANG-PSM
+            </h1>
+          </Link>
         </div>
         {/* Mobile Hamburger menu */}
         <div className='hamburger-menu md:hidden cursor-pointer hover:text-cyan-500'>

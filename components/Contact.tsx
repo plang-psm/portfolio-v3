@@ -6,7 +6,12 @@ import { useForm } from 'react-hook-form';
 import { sendEmail } from '@app/utils/send-email';
 import { FaGithub } from 'react-icons/fa';
 import { FaExternalLinkSquareAlt, FaLinkedin } from 'react-icons/fa';
-import { FormData } from '@types';
+
+export type FormData = {
+  username: string
+  email: string
+  message: string
+}
 
 function Contact() {
   const {
@@ -23,10 +28,10 @@ function Contact() {
     <div className='mt-16 max-w-[325px] md:max-w-full w-full mx-auto'>
       <div className='container mx-auto md:px-0 w-full text-center md:grid md:grid-cols-2 md:gap-4'>
         <div className='contact-container md:text-start md:px-8 md:py-16 my-auto'>
-          <h2 className='text-5xl md:text-6xl pb-2 bg-gradient-to-r from-cyan-300 to-blue-700 bg-clip-text text-transparent inline-block'>
+          <h2 className='text-5xl md:text-6xl bg-gradient-to-r from-cyan-300 to-blue-700 bg-clip-text text-transparent inline-block pb-6'>
             Get in Touch
           </h2>
-          <p className='md:text-md pb-2'>
+          <p className='md:text-md pb-6'>
             I'm currently looking for new opportunities. Reach out if you have a
             question or just want to say hi!
           </p>
@@ -52,14 +57,14 @@ function Contact() {
         <div className='contact-form pt-6' id='contact'>
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className='flex flex-col '
+            className='flex flex-col'
             noValidate
           >
             <label className='text-center py-2'>
               <input
                 type='text'
                 id='name'
-                className='p-1 w-full bg-slate-500'
+                className='p-1 mb-2 w-full bg-gray-800'
                 {...register('username', { required: 'Username Required' })}
                 name='username'
                 autoComplete='name'
@@ -77,7 +82,7 @@ function Contact() {
               <input
                 type='email'
                 id='email'
-                className='p-1 w-full bg-slate-500'
+                className='p-1 mb-2 w-full bg-gray-800'
                 {...register('email', {
                   required: 'Email is required',
                   pattern: {
@@ -101,7 +106,7 @@ function Contact() {
               <textarea
                 cols={20}
                 rows={5}
-                className='p-1 w-full bg-slate-500'
+                className='p-1 mb-2 w-full bg-gray-800'
                 {...register('message', { required: true })}
                 name='message'
                 autoComplete='message'
