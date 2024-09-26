@@ -1,6 +1,6 @@
 ---
 title: 'Student ID System'
-date: '9-6-2024'
+date: '09-06-2024'
 desc: 'Student ID System to track student basic information.'
 ---
 

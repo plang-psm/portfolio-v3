@@ -10,13 +10,13 @@ function About() {
         <span className='font-bold'>Full Stack Developer</span> with an emphasis on the <span className='font-bold'>Front End</span> in the Los
         Angeles area. I have{' '}
         <span className='font-bold'>+1 years of experience</span>{' '}
-        volunteering for Hack for LA and freelancing where I've had the
+        with Hack for LA and freelancing where I've had the
         chance to work with tools and methodologies that include{' '}
         <span className='font-bold'>
           Next.js, TypeScript, React.js, Node.js, Express.js, MongoDB,
           Tailwind CSS, GitHub, Figma, and Agile
         </span>
-        {' '}to name a few. I am finishing up a{' '}
+        {' '}to name a few. I have a{' '}
         <span className='font-bold'>
           Bachelors of Science in Computer Science
         </span>{' '}

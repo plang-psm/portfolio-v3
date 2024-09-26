@@ -36,7 +36,7 @@ const PROJECT_DATA = [
     img: '/assets/mementos_new.png',
     type: ['professional', 'all'],
     github: 'https://github.com/plang-psm/mementos',
-    live: '',
+    live: 'https://mementosla.vercel.app/',
     tools: ['Next', 'TypeScript', 'Tailwind.css', 'Figma'],
   },
   {

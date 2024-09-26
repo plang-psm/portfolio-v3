@@ -6,7 +6,7 @@ import Contact from '@components/Contact';
 
 export default function Home() {
   return (
-    <div className='py-20 flex flex-col gap-2'>
+    <div className='py-20 flex flex-col gap-2 text-lg'>
       <Header />
       <About />
       <Skills />
