@@ -19,9 +19,9 @@ export default function PostCard(
        hover:bg-opacity-70
        p-6 rounded-xl max-w-[500px] lg:max-w-full min-h-[275px] lg:min-h-[250px] h-full'>
         <div>
-          <h2 className='h-full'>{title}</h2>
+          <h3 className='h-full'>{title}</h3>
         </div>
-        <div>
+        <div className='md:py-2 lg:py-4 font-light'>
           <p>{desc}</p>
         </div>
         <div className='flex justify-between'>
