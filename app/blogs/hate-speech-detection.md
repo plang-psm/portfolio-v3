@@ -1,6 +1,6 @@
 ---
 title: 'Hate Speech Detection'
-date: 'TBD'
+date: '2024-03-01'
 desc: 'Coming soon'
 ---
 
@@ -10,4 +10,4 @@ desc: 'Coming soon'
 Coming soon...
 
 <br/>
-<span style="color: #02ec88; font-weight: lighter; font-size: 44px;"> P.S.</span>
+<span style="font-family: sans; color: #02ec88; font-weight: lighter; font-size: 44px; display: flex; justify-content: center;"> P.S.</span>

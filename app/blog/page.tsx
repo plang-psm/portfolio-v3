@@ -11,7 +11,7 @@ export default function Blog() {
           <h1 className='pb-4'>Blog.</h1>
           <h3>{postMetadata.length} Articles</h3>
         </div>
-        <h3 className='font-semibold'>Tech. Life. & Everything in between.</h3>
+        <h3 className='font-semibold text-[#02ec88]'>Tech. Life. & Everything in between.</h3>
       </div>
       <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {postMetadata.map(({ title, date, desc, slug }, index: number) => {

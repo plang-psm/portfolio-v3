@@ -4,7 +4,6 @@ date: '2024-08-20'
 desc: 'Welcome to my blog! '
 ---
 
-## First Post
 <br/>
 
 I've never been the greatest writer. It was something that I've struggled with which is why creating this blog is quite ironic. I often found myself struggling to write condensed summarizations but I found joy in the art of assembling it all together. It's probably the reason why I turn into a perfectionist when writing. 
@@ -16,6 +15,5 @@ You'd think that maybe writing isn't for me after reading that first introductio
 We'll start from there and see where this goes. Heres to a new beginning and hopefully some fulfilling and entertaining content!
 
 <br/>
-<span style="color: #02ec88; font-weight: lighter; font-size: 44px;"> P.S.</span>
-
+<span style="font-family: sans; color: #02ec88; font-weight: lighter; font-size: 44px; display: flex; justify-content: center;"> P.S.</span>
 

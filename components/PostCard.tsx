@@ -16,7 +16,7 @@ export default function PostCard(
       <div className='bg-gray-800 bg-opacity-60 px-16 py-10 shadow-lg backdrop-blur-md
       
        grid mx-auto md:mx-0 
-       hover:bg-opacity-70
+       hover:bg-opacity-70 hover:text-[#02ec88]
        p-6 rounded-xl max-w-[500px] lg:max-w-full min-h-[275px] lg:min-h-[250px] h-full'>
         <div>
           <h3 className='h-full'>{title}</h3>

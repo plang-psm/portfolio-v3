@@ -46,7 +46,7 @@ const BlogPage = (props: ParamProps) => {
         <Link href={'/blog/'}>
           <h1 className='hover:opacity-70 pb-4'>Blog.</h1>
         </Link>
-        <h3 className='font-semibold'>Tech. Life. & Everything in between.</h3>
+        <h3 className='font-semibold text-[#02ec88]'>Tech. Life. & Everything in between.</h3>
       </div>
       <h2 className='font-semibold pt-6 text-center'>{post.data.title}</h2>
       <article className='max-w-[800px] mx-auto'>
