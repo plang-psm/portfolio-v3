@@ -11,8 +11,9 @@ The Student Information System was created to give office personnel access to tr
 <br/>
 <br/>
 
+![Student Id image](/assets/student-id.png)
 
-
+<br/>
 **How it was built:**
 
 The system itself was built using Google Forms to enter the student’s ID and the current period which is then displayed on a linked Google Spreadsheet. 
